@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1TG+aijYo7DLJ6SXvIsJzRZyZQnTUBe++i+ibOUIbF+VbIhHjnlDgL55FGjeJpoCMQOKM3iBTnbtwQVXrsK4Lw==",
+  "dgSpecHash": "oVH5Sv71uApV892ffxqLiOndQ6gtubQhGcmFibrm6iO/GIEmN4WWNSgfXNnxGcamWUHUbBI/vUOck/S6AzuooA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\source\\repos\\ThucHanhWebMVC\\ThucHanhWebMVC\\ThucHanhWebMVC.csproj",
+  "projectFilePath": "C:\\Users\\Acer\\OneDrive\\Desktop\\Shop\\ShopOnlineVali\\ThucHanhWebMVC\\ThucHanhWebMVC\\ThucHanhWebMVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

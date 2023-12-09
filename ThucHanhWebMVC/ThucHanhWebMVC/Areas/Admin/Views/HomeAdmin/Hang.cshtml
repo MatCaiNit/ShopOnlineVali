@@ -1,0 +1,58 @@
+﻿@using X.PagedList.Mvc.Core;
+@using ThucHanhWebMVC.Models;
+@model X.PagedList.IPagedList<THangSx>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Hang";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>Hãng</h1>
+
+<p>
+    <a asp-action="ThemHang">Create New</a>
+</p>
+<p>@TempData["Message"]</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Hãng Sản Xuất
+            </th>
+            <th>
+                Mã Nước Thương Hiệu
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            string @cls = "table-success";
+        }
+@foreach (var item in Model) {
+            i = i + 1;
+            cls = "table-success";
+            if (i % 2 == 0)
+            {
+                cls = "table-primary";
+            }
+            <tr class="@cls">
+            <td>
+                @Html.DisplayFor(modelItem => item.HangSx)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaNuocThuongHieu)
+            </td>
+            <td>
+                <a asp-action="SuaHang" asp-route-mahang="@item.MaHangSx">Edit</a> 
+                    <a asp-action="XoaHang" asp-route-mahang="@item.MaHangSx">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@Html.PagedListPager(Model, page=>Url.Action("Hang", new {page = page}), new X.PagedList.Web.Common.PagedListRenderOptions(){
+        LiElementClasses = new List<String> {"page-item"},
+        PageClasses = new List<String> {"page-link"}
+    })

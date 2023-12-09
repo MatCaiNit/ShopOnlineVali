@@ -1,0 +1,51 @@
+﻿@using X.PagedList.Mvc.Core;
+@using ThucHanhWebMVC.Models;
+@model X.PagedList.IPagedList<TQuocGium>
+@{
+    ViewData["Title"] = "XuatXu";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<h2>Xuất xứ</h2>
+
+<p>
+    <a asp-action="ThemXuatXu">Thêm Xuất Xứ</a>
+</p>
+<p>@TempData["Message"]</p>
+<table class="table">
+    <thead>
+        <tr class="table-warning">
+            <th>
+               Tên Nước
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            string @cls = "table-success";
+        }
+@foreach (var item in Model) {
+            i = i + 1;
+            cls = "table-success";
+            if (i % 2 == 0)
+            {
+                cls = "table-primary";
+            }
+            <tr class="@cls">
+            <td>
+                @Html.DisplayFor(modelItem => item.TenNuoc)
+            </td>
+            <td>
+                <a asp-action="SuaXuatXu" asp-route-maNuoc="@item.MaNuoc">Edit</a> |
+                <a asp-action="XoaXuatXu" asp-route-maNuoc="@item.MaNuoc">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@Html.PagedListPager(Model, page=>Url.Action("XuatXu", new {page = page}), new X.PagedList.Web.Common.PagedListRenderOptions(){
+        LiElementClasses = new List<String> {"page-item"},
+        PageClasses = new List<String> {"page-link"}
+    })
