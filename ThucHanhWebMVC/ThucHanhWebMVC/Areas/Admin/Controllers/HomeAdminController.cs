@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ThucHanhWebMVC.Models;
+using ThucHanhWebMVC.Models.Authentication;
 using X.PagedList;
 
 namespace ThucHanhWebMVC.Areas.Admin.Controllers
@@ -14,6 +15,7 @@ namespace ThucHanhWebMVC.Areas.Admin.Controllers
         QlbanVaLiContext db=new QlbanVaLiContext();
         [Route("")]
         [Route("index")]
+        [Authentication]
         public IActionResult Index()
         {
             return View();

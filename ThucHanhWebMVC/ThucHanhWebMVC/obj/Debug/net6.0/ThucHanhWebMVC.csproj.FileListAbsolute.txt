@@ -540,3 +540,8 @@ C:\Users\Acer\OneDrive\Desktop\Shop\ShopOnlineVali\ThucHanhWebMVC\ThucHanhWebMVC
 C:\Users\Acer\OneDrive\Desktop\Shop\ShopOnlineVali\ThucHanhWebMVC\ThucHanhWebMVC\obj\Debug\net6.0\ThucHanhWebMVC.pdb
 C:\Users\Acer\OneDrive\Desktop\Shop\ShopOnlineVali\ThucHanhWebMVC\ThucHanhWebMVC\obj\Debug\net6.0\ThucHanhWebMVC.genruntimeconfig.cache
 C:\Users\Acer\OneDrive\Desktop\Shop\ShopOnlineVali\ThucHanhWebMVC\ThucHanhWebMVC\obj\Debug\net6.0\ref\ThucHanhWebMVC.dll
+C:\Users\Acer\OneDrive\Desktop\Shop\ShopOnlineVali\ThucHanhWebMVC\ThucHanhWebMVC\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Acer\OneDrive\Desktop\Shop\ShopOnlineVali\ThucHanhWebMVC\ThucHanhWebMVC\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Acer\OneDrive\Desktop\Shop\ShopOnlineVali\ThucHanhWebMVC\ThucHanhWebMVC\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Acer\OneDrive\Desktop\Shop\ShopOnlineVali\ThucHanhWebMVC\ThucHanhWebMVC\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Acer\OneDrive\Desktop\Shop\ShopOnlineVali\ThucHanhWebMVC\ThucHanhWebMVC\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll

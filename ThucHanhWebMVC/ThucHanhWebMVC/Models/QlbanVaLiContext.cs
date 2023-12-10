@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ThucHanhWebMVC.Models;
 
-public partial class QlbanVaLiContext : DbContext
+public partial class QlbanVaLiContext : IdentityDbContext
 {
     public QlbanVaLiContext()
     {

@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 
 namespace ThucHanhWebMVC.Models;
-
+[Serializable]
 public partial class TDanhMucSp
 {
+    
     public string MaSp { get; set; } = null!;
 
     public string? TenSp { get; set; }

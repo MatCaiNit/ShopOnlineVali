@@ -11,10 +11,17 @@ var connectionString = builder.Configuration.GetConnectionString("QlbanVaLiConte
 builder.Services.AddDbContext<QlbanVaLiContext>(x=>x.UseSqlServer(connectionString));
 
 builder.Services.AddScoped<ILoaiSpRepository, LoaiSpRepository>();
-builder.Services.AddSession();
+//builder.Services.AddSession();
 
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IOTimeout = TimeSpan.FromMinutes(15);
+    options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
+app.UseSession();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

@@ -17,16 +17,16 @@ namespace ThucHanhWebMVC.Controllers
             {
                 return RedirectToAction("Index", "Home");
             }
-           
+
         }
         [HttpPost]
         public IActionResult Login(TUser user)
         {
-            if(HttpContext.Session.GetString("UserName")==null)
+            if (HttpContext.Session.GetString("UserName") == null)
             {
-                var u = db.TUsers.Where(x=>x.Username.Equals(user.Username) &&
+                var u = db.TUsers.Where(x => x.Username.Equals(user.Username) &&
                 x.Password.Equals(user.Password)).FirstOrDefault();
-                if(u!=null)
+                if (u != null)
                 {
                     HttpContext.Session.SetString("UserName", u.Username.ToString());
                     return RedirectToAction("Index", "Home");
@@ -40,5 +40,32 @@ namespace ThucHanhWebMVC.Controllers
             HttpContext.Session.Remove("UserName");
             return RedirectToAction("Login", "Access");
         }
+
+        [Route("Register")]
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+
+        }
+
+        [Route("Register")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Register(TUser user)
+        {
+            if (ModelState.IsValid)
+            {
+                user.LoaiUser = 0;
+                db.TUsers.Add(user);
+                db.SaveChanges();
+                return RedirectToAction("Login");
+            }
+            return RedirectToAction("Login", "Access");
+        }
+
     }
-}
+
+
+    }
+
