@@ -20,6 +20,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXENoYXRMaWV1LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/ChiTietHoaDon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXENoaVRpZXRIb2FEb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/ChiTietSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXENoaVRpZXRTYW5QaGFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/DanhMucSanPham.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXERhbmhNdWNTYW5QaGFtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -32,6 +40,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEhhbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/HoaDon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEhvYURvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,8 +52,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEtoYWNoSGFuZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/KichThuoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXEtpY2hUaHVvYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/Loai.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXExvYWkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/MauSac.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXE1hdVNhYy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/NhanVien.cshtml]
@@ -50,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/SuaChatLieu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YUNoYXRMaWV1LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/SuaChiTiet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YUNoaVRpZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/SuaDt.cshtml]
@@ -64,8 +88,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YUtoYWNoSGFuZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/SuaKichThuoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YUtpY2hUaHVvYy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/SuaLoai.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YUxvYWkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/SuaMauSac.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFN1YU1hdVNhYy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/SuaNhanVien.cshtml]
@@ -92,6 +124,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1DaGF0TGlldS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/ThemChiTiet.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1DaGlUaWV0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/ThemDt.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1EdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -104,8 +140,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1LaGFjaEhhbmcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/ThemKichThuoc.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1LaWNoVGh1b2MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/ThemLoai.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1Mb2FpLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/ThemMauSac.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZUFkbWluXFRoZW1NYXVTYWMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Areas/Admin/Views/HomeAdmin/ThemNhanVien.cshtml]
@@ -140,6 +184,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNzXFJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Views/Cart/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja091dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Views/Cart/CheckOutKhachChuaLuu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxDaGVja091dEtoYWNoQ2h1YUx1dS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -162,10 +214,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Views/Home/SanPhamTheoLoai.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtVGhlb0xvYWkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Views/Payment/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Acer/OneDrive/Desktop/Shop/ShopOnlineVali/ThucHanhWebMVC/ThucHanhWebMVC/Views/Shared/Components/LoaiSpMenu/Default.cshtml]

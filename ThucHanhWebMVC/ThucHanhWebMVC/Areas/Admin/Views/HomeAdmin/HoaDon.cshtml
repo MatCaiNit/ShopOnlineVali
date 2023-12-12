@@ -1,0 +1,90 @@
+﻿@using X.PagedList.Mvc.Core;
+@using ThucHanhWebMVC.Models;
+@model X.PagedList.IPagedList<THoaDonBan>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "HoaDon";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>HoaDon</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<p>@TempData["Message"]</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Ngày Hóa Đơn
+            </th>
+            <th>
+                Tổng Tiền Hóa Đơn
+            </th>
+            <th>
+                Giảm Giá
+            </th>
+            
+            <th>
+                Mã Số Thuế
+            </th>
+            
+            <th>
+                Ghi Chú
+            </th>
+            <th>
+                Mã Khách Hàng
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int i = 0;
+            string @cls = "table-success";
+        }
+        @foreach (var item in Model)
+        {
+            i = i + 1;
+            cls = "table-success";
+            if (i % 2 == 0)
+            {
+                cls = "table-primary";
+            }
+            <tr class="@cls">
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayHoaDon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TongTienHd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiamGiaHd)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.MaSoThue)
+            </td>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.GhiChu)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaKhachHang)
+            </td>
+            
+            <td>
+                <a asp-action="Accept" asp-route-maHoaDon="@item.MaHoaDon">Gửi Hàng</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@Html.PagedListPager(Model, page=>Url.Action("HoaDon", new {page = page}), new X.PagedList.Web.Common.PagedListRenderOptions(){
+        LiElementClasses = new List<String> {"page-item"},
+        PageClasses = new List<String> {"page-link"}
+    })
+
+

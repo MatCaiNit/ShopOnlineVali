@@ -18,6 +18,7 @@ namespace ThucHanhWebMVC.Areas.Admin.Controllers
         [Authentication]
         public IActionResult Index()
         {
+            
             return View();
         }
         [Route("danhmucsanpham")]
@@ -30,6 +31,29 @@ namespace ThucHanhWebMVC.Areas.Admin.Controllers
 
             return View(lst);
         }
+
+        [Route("chitietsanpham")]
+        public IActionResult ChiTietSanPham(int? page)
+        {
+            int pageSize = 12;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var lstsanpham = db.TChiTietSanPhams.AsNoTracking().OrderBy(x => x.MaChiTietSp);
+            PagedList<TChiTietSanPham> lst = new PagedList<TChiTietSanPham>(lstsanpham, pageNumber, pageSize);
+
+            return View(lst);
+        }
+
+        [Route("kichthuoc")]
+        public IActionResult KichThuoc(int? page)
+        {
+            int pageSize = 12;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var lstkichthuoc = db.TKichThuocs.AsNoTracking().OrderBy(x => x.MaKichThuoc);
+            PagedList<TKichThuoc> lst = new PagedList<TKichThuoc>(lstkichthuoc, pageNumber, pageSize);
+
+            return View(lst);
+        }
+
         [Route("xuatxu")]
         public IActionResult XuatXu(int? page)
         {
@@ -106,6 +130,39 @@ namespace ThucHanhWebMVC.Areas.Admin.Controllers
             return View(lst);
         }
 
+        [Route("hoadon")]
+        public IActionResult HoaDon(int? page)
+        {
+            int pageSize = 12;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var lstsanpham = db.THoaDonBans.AsNoTracking().OrderBy(x => x.NgayHoaDon);
+            PagedList<THoaDonBan> lst = new PagedList<THoaDonBan>(lstsanpham, pageNumber, pageSize);
+
+            return View(lst);
+        }
+
+        [Route("chitiethoadon")]
+        public IActionResult ChiTietHoaDon(int? page)
+        {
+            int pageSize = 12;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var lstsanpham = db.TChiTietHdbs.AsNoTracking();
+            PagedList<TChiTietHdb> lst = new PagedList<TChiTietHdb>(lstsanpham, pageNumber, pageSize);
+
+            return View(lst);
+        }
+
+        [Route("mausac")]
+        public IActionResult MauSac(int? page)
+        {
+            int pageSize = 12;
+            int pageNumber = page == null || page < 0 ? 1 : page.Value;
+            var lstsanpham = db.TMauSacs.AsNoTracking().OrderBy(x => x.TenMauSac);
+            PagedList<TMauSac> lst = new PagedList<TMauSac>(lstsanpham, pageNumber, pageSize);
+
+            return View(lst);
+        }
+
         [Route("nhanvien")]
         public IActionResult NhanVien(int? page)
         {
@@ -143,6 +200,30 @@ namespace ThucHanhWebMVC.Areas.Admin.Controllers
             return View(sanPham);
         }
 
+        [Route("ThemChiTiet")]
+        [HttpGet]
+        public IActionResult ThemChiTiet()
+        {
+            ViewBag.MaSp = new SelectList(db.TDanhMucSps.ToList(), "MaSp", "TenSp");
+            ViewBag.MaKichThuoc = new SelectList(db.TKichThuocs.ToList(), "MaKichThuoc", "KichThuoc");
+            ViewBag.MaMauSac = new SelectList(db.TMauSacs.ToList(), "MaMauSac", "TenMauSac");
+            
+            return View();
+        }
+        [Route("ThemChiTiet")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ThemChiTiet(TChiTietSanPham chiTiet)
+        {
+            if (ModelState.IsValid)
+            {
+                db.TChiTietSanPhams.Add(chiTiet);
+                db.SaveChanges();
+                return RedirectToAction("ChiTietSanPham");
+            }
+            return View(chiTiet);
+        }
+
         [Route("ThemXuatXu")]
         [HttpGet]
         public IActionResult ThemXuatXu()
@@ -163,6 +244,49 @@ namespace ThucHanhWebMVC.Areas.Admin.Controllers
             }
             return View(quocgia);
         }
+
+        [Route("ThemMauSac")]
+        [HttpGet]
+        public IActionResult ThemMauSac()
+        {
+
+            return View();
+        }
+        [Route("ThemMauSac")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ThemMauSac(TMauSac mauSac)
+        {
+            if (ModelState.IsValid)
+            {
+                db.TMauSacs.Add(mauSac);
+                db.SaveChanges();
+                return RedirectToAction("MauSac");
+            }
+            return View(mauSac);
+        }
+
+        [Route("ThemKichThuoc")]
+        [HttpGet]
+        public IActionResult ThemKichThuoc()
+        {
+
+            return View();
+        }
+        [Route("ThemKichThuoc")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult ThemKichThuoc(TKichThuoc kichThuoc)
+        {
+            if (ModelState.IsValid)
+            {
+                db.TKichThuocs.Add(kichThuoc);
+                db.SaveChanges();
+                return RedirectToAction("KichThuoc");
+            }
+            return View(kichThuoc);
+        }
+
         [Route("ThemTaiKhoan")]
         [HttpGet]
         public IActionResult ThemTaiKhoan()
@@ -336,6 +460,33 @@ namespace ThucHanhWebMVC.Areas.Admin.Controllers
             return View(sanPham);
         }
 
+        [Route("SuaChiTiet")]
+        [HttpGet]
+        public IActionResult SuaChiTiet(string maChiTiet)
+        {
+            ViewBag.MaSp = new SelectList(db.TDanhMucSps.ToList(), "MaSp", "TenSp");
+            ViewBag.MaKichThuoc = new SelectList(db.TKichThuocs.ToList(), "MaKichThuoc", "KichThuoc");
+            ViewBag.MaMauSac = new SelectList(db.TMauSacs.ToList(), "MaMauSac", "TenMauSac");
+
+            var sanPham = db.TChiTietSanPhams.Find(maChiTiet);
+            return View(sanPham);
+        }
+        [Route("SuaChiTiet")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SuaChiTiet(TChiTietSanPham chiTietSanPham)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(chiTietSanPham).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("ChiTietSanPham", "HomeAdmin");
+            }
+            return View(chiTietSanPham);
+        }
+
+
+
         [Route("SuaTaiKhoan")]
         [HttpGet]
         public IActionResult SuaTaiKhoan(string tentaikhoan)
@@ -378,6 +529,49 @@ namespace ThucHanhWebMVC.Areas.Admin.Controllers
             return View(quocgia);
         }
 
+
+        [Route("SuaMauSac")]
+        [HttpGet]
+        public IActionResult SuaMauSac(string maMauSac)
+        {
+            var mausac = db.TMauSacs.Find(maMauSac);
+            return View(mausac);
+        }
+        [Route("SuaMauSac")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SuaMauSac(TMauSac mauSac)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(mauSac).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("MauSac", "HomeAdmin");
+            }
+            return View(mauSac);
+        }
+
+        [Route("SuaKichThuoc")]
+        [HttpGet]
+        public IActionResult SuaKichThuoc(string maKichThuoc)
+        {
+            var kichthuoc = db.TKichThuocs.Find(maKichThuoc);
+            return View(kichthuoc);
+        }
+        [Route("SuaKichThuoc")]
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SuaKichThuoc(TKichThuoc kichThuoc)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(kichThuoc).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("KichThuoc", "HomeAdmin");
+            }
+            return View(kichThuoc);
+        }
+
         [Route("SuaChatLieu")]
         [HttpGet]
         public IActionResult SuaChatLieu(string machatlieu)
@@ -388,15 +582,15 @@ namespace ThucHanhWebMVC.Areas.Admin.Controllers
         [Route("SuaChatLieu")]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult SuaChatLieu(TChatLieu chatlieu)
+        public IActionResult SuaChatLieu(TChatLieu chatLieu)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(chatlieu).State = EntityState.Modified;
+                db.Entry(chatLieu).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("ChatLieu", "HomeAdmin");
             }
-            return View(chatlieu);
+            return View(chatLieu);
         }
 
         [Route("SuaHang")]
@@ -524,6 +718,25 @@ namespace ThucHanhWebMVC.Areas.Admin.Controllers
             TempData["Message"] = "Sản Phẩm Đã Được Xóa";
             return RedirectToAction("DanhMucSanPham", "HomeAdmin");
         }
+
+        [Route("XoaChiTiet")]
+        [HttpGet]
+        public IActionResult XoaChiTiet(string maChiTiet)
+        {
+            TempData["Message"] = "";
+            var chiTietSanPhams = db.TChiTietHdbs.Where(x => x.MaChiTietSp == maChiTiet).ToList();
+            if (chiTietSanPhams.Count > 0)
+            {
+                TempData["Message"] = "Không Xóa Được Sản Phẩm Này";
+                return RedirectToAction("ChiTietSanPham", "HomeAdmin");
+            }
+            
+            db.Remove(db.TChiTietSanPhams.Find(maChiTiet));
+            db.SaveChanges();
+            TempData["Message"] = "Sản Phẩm Đã Được Xóa";
+            return RedirectToAction("ChiTietSanPham", "HomeAdmin");
+        }
+
         [Route("XoaXuatXu")]
         [HttpGet]
         public IActionResult XoaXuatXu(string maNuoc)
@@ -671,5 +884,44 @@ namespace ThucHanhWebMVC.Areas.Admin.Controllers
             TempData["Message"] = "Khách Hàng Đã Được Xóa";
             return RedirectToAction("KhachHang", "HomeAdmin");
         }
+
+
+        [Route("XoaKichThuoc")]
+        [HttpGet]
+        public IActionResult XoaKichThuoc(string maKichThuoc)
+        {
+            TempData["Message"] = "";
+            var kt = db.TChiTietSanPhams.Where(x => x.MaKichThuoc == maKichThuoc).ToList();
+            if (kt.Count > 0)
+            {
+                TempData["Message"] = "Không Xóa Được Kích Thước Này";
+                return RedirectToAction("KichThuoc", "HomeAdmin");
+            }
+
+            db.Remove(db.TKichThuocs.Find(maKichThuoc));
+            db.SaveChanges();
+            TempData["Message"] = "Kích Thước Này Đã Được Xóa";
+            return RedirectToAction("KichThuoc", "HomeAdmin");
+        }
+
+        [Route("XoaMauSac")]
+        [HttpGet]
+        public IActionResult XoaMauSac(string maMauSac)
+        {
+            TempData["Message"] = "";
+            var ms = db.TChiTietSanPhams.Where(x => x.MaMauSac == maMauSac).ToList();
+            if (ms.Count > 0)
+            {
+                TempData["Message"] = "Không Xóa Được Màu Sắc Này";
+                return RedirectToAction("MauSac", "HomeAdmin");
+            }
+
+            db.Remove(db.TMauSacs.Find(maMauSac));
+            db.SaveChanges();
+            TempData["Message"] = "Màu Sắc Này Đã Được Xóa";
+            return RedirectToAction("MauSac", "HomeAdmin");
+        }
+
+        
     }
 }

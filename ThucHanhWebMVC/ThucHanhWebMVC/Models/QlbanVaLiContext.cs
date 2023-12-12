@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ThucHanhWebMVC.Models;
 
-public partial class QlbanVaLiContext : IdentityDbContext
+public partial class QlbanVaLiContext : DbContext
 {
     public QlbanVaLiContext()
     {

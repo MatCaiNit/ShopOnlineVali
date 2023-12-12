@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ThucHanhWebMVC.Models;
+using Microsoft.AspNetCore.Http;
 
 namespace ThucHanhWebMVC.Controllers
 {
@@ -9,7 +10,7 @@ namespace ThucHanhWebMVC.Controllers
         [HttpGet]
         public IActionResult Login()
         {
-            if (HttpContext.Session.GetString("Username") == null)
+            if (HttpContext.Session.GetString("UserName") == null)
             {
                 return View();
             }
@@ -26,6 +27,7 @@ namespace ThucHanhWebMVC.Controllers
             {
                 var u = db.TUsers.Where(x => x.Username.Equals(user.Username) &&
                 x.Password.Equals(user.Password)).FirstOrDefault();
+                
                 if (u != null)
                 {
                     HttpContext.Session.SetString("UserName", u.Username.ToString());
