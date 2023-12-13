@@ -7,7 +7,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<h1>HoaDon</h1>
+<h1>Hóa Đơn</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -75,9 +75,7 @@
                 @Html.DisplayFor(modelItem => item.MaKhachHang)
             </td>
             
-            <td>
-                <a asp-action="Accept" asp-route-maHoaDon="@item.MaHoaDon">Gửi Hàng</a>
-            </td>
+            
         </tr>
 }
     </tbody>
